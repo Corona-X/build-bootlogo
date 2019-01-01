@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B7E528D1EA2D49800E8EE2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7E528C1EA2D49800E8EE2F /* main.m */; };
-		8BB5834720F9F4B70066FD84 /* backward.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5834620F9F4B70066FD84 /* backward.m */; };
+		8BB5834720F9F4B70066FD84 /* reverse.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB5834620F9F4B70066FD84 /* reverse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,7 +29,7 @@
 		8B7E52891EA2D49800E8EE2F /* build-bootlogo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "build-bootlogo"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7E528C1EA2D49800E8EE2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8B7E52941EA2D4B000E8EE2F /* bootlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bootlogo.png; sourceTree = "<group>"; };
-		8BB5834620F9F4B70066FD84 /* backward.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = backward.m; sourceTree = "<group>"; };
+		8BB5834620F9F4B70066FD84 /* reverse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = reverse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				8B0D46F421A5CDB9009C1AB9 /* XKBootLogo.h */,
-				8BB5834620F9F4B70066FD84 /* backward.m */,
+				8BB5834620F9F4B70066FD84 /* reverse.m */,
 				8B7E52941EA2D4B000E8EE2F /* bootlogo.png */,
 				8B7E528C1EA2D49800E8EE2F /* main.m */,
 			);
@@ -96,7 +96,7 @@
 		8B7E52811EA2D49800E8EE2F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Corona Industries LTD";
 				TargetAttributes = {
 					8B7E52881EA2D49800E8EE2F = {
@@ -127,7 +127,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BB5834720F9F4B70066FD84 /* backward.m in Sources */,
+				8BB5834720F9F4B70066FD84 /* reverse.m in Sources */,
 				8B7E528D1EA2D49800E8EE2F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

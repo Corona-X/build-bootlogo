@@ -9,9 +9,9 @@ typedef UInt64 OSSize;
 
 void reverseTransform(uint8_t *buffer)
 {
-    for (size_t y = 0; y < kXKBootLogoHeight; y++)
+    for (NSInteger y = 0; y < kXKBootLogoHeight; y++)
     {
-        for (size_t x = 0; x < kXKBootLogoWidth; x++)
+        for (NSInteger x = 0; x < kXKBootLogoWidth; x++)
         {
             UInt64 imageIndex = ((y * 4) * kXKBootLogoWidth) + (x * 4);
             UInt64 index = (y * kXKBootLogoWidth) + x;
@@ -27,7 +27,11 @@ void reverseTransform(uint8_t *buffer)
 
 void doReverse(NSURL *url)
 {
-    NSBitmapImageRep *bitmapImage = [[NSBitmapImageRep alloc] initWithBitmapDataPlanes:nil pixelsWide:kXKBootLogoWidth pixelsHigh:kXKBootLogoHeight bitsPerSample:8 samplesPerPixel:3 hasAlpha:NO isPlanar:NO colorSpaceName:NSCalibratedRGBColorSpace bytesPerRow:(kXKBootLogoWidth * 4) bitsPerPixel:32];
+    NSBitmapImageRep *bitmapImage = [[NSBitmapImageRep alloc] initWithBitmapDataPlanes:nil
+            pixelsWide:kXKBootLogoWidth pixelsHigh:kXKBootLogoHeight
+            bitsPerSample:8 samplesPerPixel:3 hasAlpha:NO
+            isPlanar:NO colorSpaceName:NSCalibratedRGBColorSpace
+            bytesPerRow:(kXKBootLogoWidth * 4) bitsPerPixel:32];
 
     reverseTransform([bitmapImage bitmapData]);
 
@@ -35,11 +39,12 @@ void doReverse(NSURL *url)
     [pngData writeToURL:url atomically:YES];
 }
 
-#else
+#else /* !__has_include("XKBootLogo.h") */
 
 void doReverse(NSURL *url)
 {
-    printf("This functionality is not compiled into this binary.\n");
+    printf("This binary hasn't been compiled with the proper header to recreate a proper image.\n");
+    printf("Please run the program and then recompile.\n");
 }
 
-#endif
+#endif /* __has_include("XKBootLogo.h") */
